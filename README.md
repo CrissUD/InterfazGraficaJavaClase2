@@ -10,12 +10,12 @@ Curso propuesto por el grupo de trabajo Semana de Ingenio y Diseño (**SID**) de
 
 ## Objetivos
 
-- Identificar las 4 etapas para configurar objetos gráficos básicos y así ser mostrados en pantalla en una vista.
+- Identificar las 4 etapas para crear objetos gráficos básicos y así ser mostrados en pantalla en una vista.
 - Aprender los métodos principales para configurar los objetos gráficos y mostrarlos por pantalla.
 - Explorar el enfoque de posicionamiento por medio de pixeles sin el uso de manager de Layouts.
 - Comprender la diferencia de adición hacia una ventana principal o hacia un panel
 
-# Etapas de Configuración de un Objeto Gráfico
+# Etapas de Creación de un Objeto Gráfico
 
 ## **Declaración**
 
@@ -57,7 +57,7 @@ Hasta el momento el objeto gráfico esta listo para ser mostrado sin embargo no 
   <p>Adición de dos objetos gráficos una vez se hayan configurado </p>
 </div>
 
-Puede verse en la anterior imagen que la forma de añadir elementos gráficos en la ventana consiste en llamar **this.add()** la palabra clave **this** hace referencia a que se esta llamando a la misma clase donde se esta codificando. Sin embargo pueden existir algunos objetos gráficos que queremos añadir no en la ventana principal, sino en un Panel por ejemplo. A continuación se muestra como se podría hacer esto.
+Puede verse en la anterior imagen que la forma de añadir elementos gráficos en la ventana consiste en llamar **this.add()**. La palabra clave **this** hace referencia a que se esta llamando a la misma clase donde se esta codificando. Sin embargo pueden existir algunos objetos gráficos que queremos añadir no en la ventana principal, sino en un Panel por ejemplo. A continuación se muestra como se podría hacer esto.
 
 <div align="center">
   <img  src="./resources/adicion2.png">
@@ -75,8 +75,9 @@ En esta sección aprenderemos la forma de configurar objetos gráficos para ser 
 - **JComboBox**
 - **JButton**
 - **JCheckBox**
-- **JRadioButton** (Se explicara brevemente su configuración ya que es similar a la de checkBox)
 - **ButtonGroup**
+- **JRadioButton** (Se explicara brevemente su creación ya que es similar a la de checkBox)
+- **JTextArea** (Se explicara brevemente su creación ya que es similar a la de un TextField)
 
 ## Antes de comenzar
 
@@ -127,7 +128,7 @@ nuestro código se vera algo asi:
   <p>Clase de login de usuario</p>
 </div>
 
-Cabe resaltar que la configuración de la ventana siempre ira de ultimas se se deja en otros lados probablemente el programa tendrá problemas en mostrar la interfaz. Sobretodo con la ultima linea de código **setVisible**
+Cabe resaltar que la configuración de la ventana siempre ira de ultimas, si se deja en otros lados probablemente el programa tendrá problemas en mostrar la interfaz. Sobretodo con la ultima linea de código **setVisible**
 
 ## JLabel
 
@@ -178,7 +179,7 @@ Corremos nuestra aplicación y esta en la misma posición que antes.
 
 **¿Por que esta pasando esto?**
 
-Esto se debe al manager de posicionamiento de Java que por defecto maneja un Layout predeterminado, el cual tratara de dejar nuestros objetos en la parte central superior de nuestra pantalla, el problema ocurre cuando tenemos dos o mas objetos y este tratara de dividir el panel de forma equitativa para posicionarlos y esto no es lo que queremos muchas veces. Para esto debemos configurar nuestra ventana y nuestros paneles para que deje nula esa propiedad y **seamos nosotros quienes posicionemos nuestros objetos mediante posicionamiento en pixeles.**
+Esto se debe al manager de posicionamiento de Java que por defecto maneja un Layout predeterminado, el cual tratará de dejar nuestros objetos en la parte central superior de nuestra pantalla, el problema ocurre cuando tenemos dos o mas objetos y este tratara de dividir el panel de forma equitativa para posicionarlos y esto no es lo que queremos muchas veces. Para esto debemos configurar nuestra ventana y nuestros paneles para que deje nula esa propiedad y **seamos nosotros quienes posicionemos nuestros objetos mediante posicionamiento en pixeles.**
 
 ```
 pDerecha.setLayout(null);
@@ -270,6 +271,16 @@ Como los anteriores objetos gráficos tiene algunas configuraciones que ya hemos
   .
 - **setHorizontalAlignment:** recibe por parámetro un objeto tipo **SwingConstants** y le da la dirección de la posición del texto. Si no se llama por defecto el texto estará posicionado en la parte izquierda, sus otras opciones principales son **CENTER** y **RIGHT**. Aunque existen mas opciones estas configuran la posición con respecto a Y, no nos interesa tanto esas opciones.
 
+**Paréntesis**
+
+Para asegurarnos de que nuestros JLabel también queden centrados vamos a añadir esa propiedad en la configuración de estos
+
+```
+lEslogan.setHorizontalAlignment(SwingConstants.CENTER);
+lTituloLogin.setHorizontalAlignment(SwingConstants.CENTER);
+lNotificaciones.setHorizontalAlignment(SwingConstants.CENTER);
+```
+
 ### Adición
 
 ```
@@ -348,7 +359,7 @@ cbTipoUsuario.setBackground(Color.WHITE);
 A parte de las configuraciones que ya se vieron antes en este caso existen dos particularidades:
 
 - **addItem:** recibe por parámetro un String y lo admite como opción a seleccionar por el usuario.
-- **getRenderer, setHorizontalAlignment:** Si se quieren centrar los elementos dentro de un ComboBox, esto no se podrá de forma directa. Cada una de las opciones dentro del ComboBox son tratados como Labels y para obtener su valor es necesario pedirle al ComboBox los elementos con el método **getRenderer**. Una vez obtenemos los elementos (JLabels) es necesario hacer un **Cast** de objeto para asi obtener las configuraciones propias de un JLabel **((JLabel) cbTipoUsuario.getRenderer())** de lo contrario al poner . y esperar las opciones no se vera la opción **setHorizontalAlignment**.
+- **getRenderer, setHorizontalAlignment:** Si se quieren centrar los elementos dentro de un ComboBox, esto no se podrá de forma directa. Cada una de las opciones dentro del ComboBox son tratados como Labels y para obtener su valor es necesario pedirle al ComboBox los elementos con el método **getRenderer**. Una vez obtenemos los elementos (JLabels) es necesario hacer un **Cast** de objeto para asi obtener las configuraciones propias de un JLabel **((JLabel) cbTipoUsuario.getRenderer())** de lo contrario al poner . (punto) y esperar las opciones no se vera la opción **setHorizontalAlignment**.
 
 ### Adición
 
@@ -358,7 +369,7 @@ pDerecha.add(cbTipoUsuario);
 
 ## JButton
 
-Los botones son la forma mas común con la que un usuario podrá interactuar con las interfaces gráficas. Estos botones generan acciones que el usuario puede generar al dar Click sobre estos, entre algunas opciones, puede estar el envió de información, traer información, abrir otras secciones etc.
+Los botones son la forma mas común con la que un usuario podrá interactuar con las interfaces gráficas. Estos botones generan acciones que el usuario puede activar al dar Click sobre estos, entre algunas opciones, puede estar el envió de información, traer información, abrir otras secciones etc.
 
 ### Declaración
 
@@ -386,8 +397,9 @@ bEntrar.setForeground(Color.WHITE);
 bEntrar.setFocusable(false);
 ```
 
-A parte de las configuraciones que ya se vieron antes en este caso existe una particularidad:
+A parte de las configuraciones que ya se vieron antes en este caso existen dos particularidades:
 
+- **setHorizontalAlignment:** Por defecto los botones van a poner el texto centrado pero en caso de que se quiera colocar el texto a la izquierda o a la derecha se puede utilizar este método.
 - **setFocusable:** Recibe por parámetro un booleano que por defecto esta en True, si le cambiamos la configuración a False va a quitar el cuadro por defecto que rodea al texto del botón una vez se oprima click.
 
 <div align="center">
@@ -532,29 +544,60 @@ En este caso nuestra interfaz no tendrá RadioButtons pero a continuación se mu
 ### Declaración
 
 ```
-private JRadioButton rBotonOpcion1, rBotonOpcion2;
+private JRadioButton rbOpcion1, rbOpcion2;
 ```
+
+La variable (objeto) que creemos para los JRadioButton empezaran con rb en minúscula seguido del nombre de la variable.
 
 ### Ejemplificación
 
 ```
-rBotonOpcion1= new JRadioButton("opcion1");
-rBotonOpcion2= new JRadioButton("opcion2");
+rbOpcion1= new JRadioButton("opcion1");
+rbOpcion2= new JRadioButton("opcion2");
 ```
 
 ### Configuración
 
 ```
-rBotonOpcion1.setBounds(50, 400, 120, 30);
-rBotonOpcion2.setBounds(200, 400, 120, 30);
-
+rbOpcion1.setBounds(50, 400, 120, 30);
+rbOpcion2.setBounds(200, 400, 120, 30);
 ```
 
 ### Adición
 
 ```
-panel.add(rBotonOpcion1);
-panel.add(rBotonOpcion2);
+panel.add(rbOpcion1);
+panel.add(rbOpcion2);
+```
+
+## JTextArea
+
+Un objeto gráfico textArea expande un poco el concepto de los textField ya que soporta una mayor cantidad de texto y esta diseñado justamente para recibir grandes cantidades de texto. A continuación se muestra una breve explicación de su creación:
+
+### Declaración
+
+```
+private JTextArea taSugerencias;
+```
+
+La variable (objeto) que creemos para los JTextArea empezaran con ta en minúscula seguido del nombre de la variable.
+
+### Ejemplificación
+
+```
+taSugerencias= new JTextArea("Escribe algo...");
+```
+
+### Configuración
+
+```
+taSugerencias.setBounds(10, 10, 230, 140);
+```
+
+### Adición
+
+```
+panel.add(taSugerencias);
 ```
 
 # Resultado

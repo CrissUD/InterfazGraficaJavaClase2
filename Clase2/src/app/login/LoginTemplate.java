@@ -48,6 +48,7 @@ public class LoginTemplate extends JFrame {
         lEslogan = new JLabel("Te ayudamos en todo");
         lEslogan.setSize(130, 20);
         lEslogan.setLocation((pDerecha.getWidth() - lEslogan.getWidth()) / 2, 40);
+        lEslogan.setHorizontalAlignment(SwingConstants.CENTER);
         lEslogan.setForeground(Color.DARK_GRAY);
         pDerecha.add(lEslogan);
 
@@ -55,12 +56,14 @@ public class LoginTemplate extends JFrame {
         lTituloLogin.setSize(110, 30);
         lTituloLogin.setLocation((pDerecha.getWidth() - lTituloLogin.getWidth()) / 2, 60);
         lTituloLogin.setForeground(Color.DARK_GRAY);
+        lTituloLogin.setHorizontalAlignment(SwingConstants.CENTER);
         pDerecha.add(lTituloLogin);
 
         lNotificaciones = new JLabel("¿Recibir Notificaciones?");
         lNotificaciones.setSize(140, 20);
         lNotificaciones.setLocation((pDerecha.getWidth() - lNotificaciones.getWidth()) / 2, 370);
         lNotificaciones.setForeground(Color.DARK_GRAY);
+        lNotificaciones.setHorizontalAlignment(SwingConstants.CENTER);
         pDerecha.add(lNotificaciones);
 
         tNombreUsuario = new JTextField("Nombre Usuario");
