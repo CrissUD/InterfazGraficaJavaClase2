@@ -13,7 +13,7 @@ Curso propuesto por el grupo de trabajo Semana de Ingenio y Diseño (**SID**) de
 - Identificar las 4 etapas para configurar objetos gráficos básicos y así ser mostrados en pantalla en una vista.
 - Aprender los métodos principales para configurar los objetos gráficos y mostrarlos por pantalla.
 - Explorar el enfoque de posicionamiento por medio de pixeles sin el uso de manager de Layouts.
-- Comprender la diferencia de adicion hacia una ventana principal o hacia un panel
+- Comprender la diferencia de adición hacia una ventana principal o hacia un panel
 
 # Etapas de Configuración de un Objeto Gráfico
 
@@ -251,7 +251,7 @@ La variable (objeto) que creemos para los textField empezaran con t minúscula s
 tNombreUsuario = new JTextField("Nombre Usuario");
 ```
 
-Al igual que con los Label estos pueden recibir un String por parámetro desde el constructor, este funciona como **placeholder** pero necesita de una configuración adicional que en esta clase no veremos por ahora. De nuevo no es obligatirio colocar el String.
+Al igual que con los Label estos pueden recibir un String por parámetro desde el constructor, este funciona como **placeholder** pero necesita de una configuración adicional que en esta clase no veremos por ahora. De nuevo no es obligatorio colocar el String.
 
 ### Configuración
 
@@ -268,7 +268,7 @@ Como los anteriores objetos gráficos tiene algunas configuraciones que ya hemos
 
 - **setCaretColor:** recibe por parámetro un objeto decorador de tipo Color y representa el color del Caret (la linea que parpadea indicando la posición de texto para escribir)
   .
-- **setHorizontalAlignment:** recibe por parámetro un objeto tipo **SwingConstants** y le da la dirección de la posición del texto. Si no se llama por defecto el texto estara posicionado en la parte izquierda, sus otras opciones principales son **CENTER** y **RIGHT**. Aunque existen mas opciones estas configuran la posición con respecto a Y, no nos interesa tanto esas opciones.
+- **setHorizontalAlignment:** recibe por parámetro un objeto tipo **SwingConstants** y le da la dirección de la posición del texto. Si no se llama por defecto el texto estará posicionado en la parte izquierda, sus otras opciones principales son **CENTER** y **RIGHT**. Aunque existen mas opciones estas configuran la posición con respecto a Y, no nos interesa tanto esas opciones.
 
 ### Adición
 
