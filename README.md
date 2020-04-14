@@ -41,7 +41,7 @@ La ejemplificación del objeto Gráfico consiste en darle un valor inicial al ob
 
 ## **Configuración**
 
-La configuración es la etapa donde llamaremos todos los métodos proporcionados por la clase del objeto gráfico para proporcionarle propiedades gráficas y este pueda verse en la pantalla. Mas adelante se explicara el propósito de cada método, por ahora solo se mostrara un ejemplo.
+La configuración es la etapa donde llamaremos todos los métodos proporcionados por la clase del objeto gráfico para darle propiedades gráficas y este pueda verse en la pantalla. Mas adelante se explicara el propósito de cada método, por ahora solo se mostrara un ejemplo.
 
 <div align="center">
   <img  src="./resources/configuracion.png">
