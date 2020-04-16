@@ -273,7 +273,7 @@ Como los anteriores objetos gráficos tiene algunas configuraciones que ya hemos
 
 **Paréntesis**
 
-Para asegurarnos de que nuestros JLabel también queden centrados vamos a añadir esa propiedad en la configuración de estos
+Para asegurarnos de que nuestros JLabel también queden centrados vamos a añadir esa propiedad en la configuración de estos, aunque aquí se muestra que están seguidas estas configuraciones en nuestro código las vamos a colocar en las respectivas configuraciones de cada uno de los labels que creamos.
 
 ```
 lEslogan.setHorizontalAlignment(SwingConstants.CENTER);
@@ -425,7 +425,7 @@ Hasta el momento nuestra interfaz se ve asi:
   <p>Interfaz login de usuario con los nuevos objetos añadidos</p>
 </div>
 
-Vamos añadir 5 botones mas que por esta clase no tendrán propósito pero mas adelante si lo tendrán:
+Vamos añadir 5 botones más con lo que aprendimos, estos botones por esta clase no tendrán propósito pero mas adelante si lo tendrán:
 
 ```
 private JButton bEntrar, bCerrar, bRegistrarse, bOpcion1, bOpcion2, bOpcion3;
@@ -461,7 +461,10 @@ pIzquierda.add(bOpcion3);
 
 ## JCheckButton
 
-Los CheckButton normalmente son usados para cubrir estados de varias opciones, puede utilizar varios enfoques, elección multiple de opciones o elección de una sola opción.
+Los CheckButton normalmente son usados para cubrir estados de varias opciones, puede utilizar varios enfoques:
+
+- elección multiple de opciones
+- elección de una sola opción.
 
 ### Declaración
 
