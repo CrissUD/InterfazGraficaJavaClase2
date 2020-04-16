@@ -582,7 +582,7 @@ pIzquierda.add(rbOpcion2);
 
 ## JTextArea
 
-Un objeto gráfico textArea expande un poco el concepto de los textField ya que soporta una mayor cantidad de texto y esta diseñado justamente para recibir grandes cantidades de texto. A continuación se muestra una breve explicación de su creación:
+Un objeto gráfico textArea expande un poco el concepto de los textField ya que soporta una mayor cantidad de texto y esta diseñado justamente para recibir grandes cantidades de texto. A continuación se muestra una breve explicación de su creación ya que esta tampoco hará parte de nuestra interfaz:
 
 ### Declaración
 
@@ -614,7 +614,7 @@ Si añadimos estos componentes nuestra interfaz se vería algo así:
 
 <div align="center">
   <img  src="./resources/interfaz5.png">
-  <p>Interfaz login de usuario, resultado Final</p>
+  <p>Interfaz login de usuario con adición de JTextArea y JRadioButton</p>
 </div>
 
 Sin embargo como se dijo anteriormente estos dos objetos gráficos no harán parte de nuestra interfaz asi que por ahora se comentaran estas partes en nuestro código.
