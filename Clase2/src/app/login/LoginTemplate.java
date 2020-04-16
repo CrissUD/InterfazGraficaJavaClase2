@@ -133,14 +133,14 @@ public class LoginTemplate extends JFrame {
         checkSi.setFocusable(false);
         checkSi.setBackground(Color.WHITE);
         checkSi.setLocation((pDerecha.getWidth() - checkSi.getWidth()) / 2 - 15, 345);
-        // pDerecha.add(checkSi);
+        pDerecha.add(checkSi);
 
         checkNo = new JCheckBox("No");
         checkNo.setSize(45, 25);
         checkNo.setFocusable(false);
         checkNo.setBackground(Color.WHITE);
         checkNo.setLocation((pDerecha.getWidth() + checkNo.getWidth()) / 2 - 15, 345);
-        // pDerecha.add(checkNo);
+        pDerecha.add(checkNo);
 
         grupo = new ButtonGroup();
         grupo.add(checkSi);

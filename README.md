@@ -459,6 +459,13 @@ bOpcion3.setBounds(10, 280, 30, 20);
 pIzquierda.add(bOpcion3);
 ```
 
+y nuestra interfaz se ve ahora así:
+
+<div align="center">
+  <img  src="./resources/interfaz4.png">
+  <p>Interfaz login de usuario, con adición de mas botones</p>
+</div>
+
 ## JCheckButton
 
 Los CheckButton normalmente son usados para cubrir estados de varias opciones, puede utilizar varios enfoques:
@@ -502,7 +509,7 @@ pDerecha.add(checkSi);
 pDerecha.add(checkNo);
 ```
 
-En nuestra aplicación queremos tomar el enfoque de única respuesta, sin embargo al correr nuestra app, podemos notar que se pueden seleccionan las dos opciones.
+En nuestra aplicación queremos tomar el enfoque de única opción, sin embargo al correr nuestra app, podemos notar que se pueden seleccionan las dos opciones.
 
 <div align="center">
   <img  src="./resources/check1.png">
@@ -606,7 +613,7 @@ panel.add(taSugerencias);
 # Resultado
 
 <div align="center">
-  <img  src="./resources/interfaz4.png">
+  <img  src="./resources/interfaz5.png">
   <p>Interfaz login de usuario, resultado Final</p>
 </div>
 
