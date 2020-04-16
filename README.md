@@ -66,9 +66,9 @@ Puede verse en la anterior imagen que la forma de añadir elementos gráficos en
 
 # Creación de objetos gráficos básicos.
 
-En esta sección aprenderemos la forma de crear objetos gráficos para ser mostrados en pantalla, basándonos en los 4 pasos que acabamos de ver para que estos objetos sean mostrados. Los objetos explicados a continuación serán:
+En esta sección aprenderemos la forma de crear objetos gráficos para ser mostrados en pantalla, basándonos en los 4 pasos que acabamos de ver. Los objetos explicados a continuación serán:
 
-- **JPanel:**
+- **JPanel**
 - **JLabel**
 - **JTextField**
 - **JPassworldField**
