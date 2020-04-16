@@ -3,6 +3,8 @@ package app.login;
 import java.awt.Color;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
+// import javax.swing.JRadioButton;
+// import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.ButtonGroup;
@@ -22,6 +24,8 @@ public class LoginTemplate extends JFrame {
     private JButton bEntrar, bCerrar, bRegistrarse, bOpcion1, bOpcion2, bOpcion3;
     private JCheckBox checkSi, checkNo;
     private ButtonGroup grupo;
+    // private JRadioButton rbOpcion1, rbOpcion2;
+    // private JTextArea taSugerencias;
 
     public LoginTemplate() {
         super("Login Usuario");
@@ -145,6 +149,18 @@ public class LoginTemplate extends JFrame {
         grupo = new ButtonGroup();
         grupo.add(checkSi);
         grupo.add(checkNo);
+
+        // rbOpcion1 = new JRadioButton("opcion1");
+        // rbOpcion1.setBounds(50, 400, 120, 30);
+        // pIzquierda.add(rbOpcion1);
+
+        // rbOpcion2 = new JRadioButton("opcion2");
+        // rbOpcion2.setBounds(200, 400, 120, 30);
+        // pIzquierda.add(rbOpcion2);
+
+        // taSugerencias = new JTextArea("Escribe algo...");
+        // taSugerencias.setBounds(185, 180, 230, 140);
+        // pIzquierda.add(taSugerencias);
 
         setLayout(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);

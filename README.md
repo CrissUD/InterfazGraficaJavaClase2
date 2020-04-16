@@ -576,8 +576,8 @@ rbOpcion2.setBounds(200, 400, 120, 30);
 ### Adición
 
 ```
-panel.add(rbOpcion1);
-panel.add(rbOpcion2);
+pIzquierda.add(rbOpcion1);
+pIzquierda.add(rbOpcion2);
 ```
 
 ## JTextArea
@@ -601,19 +601,28 @@ taSugerencias= new JTextArea("Escribe algo...");
 ### Configuración
 
 ```
-taSugerencias.setBounds(10, 10, 230, 140);
+taSugerencias.setBounds(185, 180, 230, 140);
 ```
 
 ### Adición
 
 ```
-panel.add(taSugerencias);
+pIzquierda.add(taSugerencias);
 ```
+
+Si añadimos estos componentes nuestra interfaz se vería algo así:
+
+<div align="center">
+  <img  src="./resources/interfaz5.png">
+  <p>Interfaz login de usuario, resultado Final</p>
+</div>
+
+Sin embargo como se dijo anteriormente estos dos objetos gráficos no harán parte de nuestra interfaz asi que por ahora se comentaran estas partes en nuestro código.
 
 # Resultado
 
 <div align="center">
-  <img  src="./resources/interfaz5.png">
+  <img  src="./resources/interfaz6.png">
   <p>Interfaz login de usuario, resultado Final</p>
 </div>
 
