@@ -22,7 +22,7 @@ Curso propuesto por el grupo de trabajo Semana de Ingenio y Diseño (**SID**) de
 La declaración de un objeto gráfico consiste en indicarle al sistema que la clase donde se esta trabajando tendrá un atributo de algún tipo de estos objetos. Esta declaración tiene 3 partes, estas son:
 
 - **Tipo Acceso:** El tipo de acceso sera siempre privado ya que son atributos de la clase como se discutió en la anterior clase.
-- **Tipo de Objeto Gráfico:** Se refiere a la clase del objeto que vamos a crear (JButton, JTextField, JLabel, JPanel son algunos ejemplos) y la generación de estas clases casi siempre van a necesitar la importación de la librería que soporte la creación del objeto, estas se hacen automáticamente dependiendo del editor.
+- **Tipo de Objeto Gráfico:** Se refiere a la clase del objeto que vamos a crear (JButton, JTextField, JLabel, JPanel son algunos ejemplos) y la generación de estas clases casi siempre van a necesitar la importación de la librería que soporte la creación del objeto, estas se importan automáticamente dependiendo del editor.
 - **Variable:** El nombre que el programador elija darle y sera esta el objeto por el cual se podrá acceder a sus métodos.
 
 <div align="center">
@@ -64,9 +64,9 @@ Puede verse en la anterior imagen que la forma de añadir elementos gráficos en
   <p>Adición de objetos gráficos dentro de Paneles </p>
 </div>
 
-# Configuración de objetos gráficos básicos.
+# Creación de objetos gráficos básicos.
 
-En esta sección aprenderemos la forma de configurar objetos gráficos para ser mostrados en pantalla, basándonos en los 4 pasos que acabamos de ver para que estos objetos sean mostrados. Los objetos explicados a continuación serán:
+En esta sección aprenderemos la forma de crear objetos gráficos para ser mostrados en pantalla, basándonos en los 4 pasos que acabamos de ver para que estos objetos sean mostrados. Los objetos explicados a continuación serán:
 
 - **JPanel:**
 - **JLabel**
