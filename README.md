@@ -208,19 +208,13 @@ pDerecha.add(lEslogan);
 
 lTituloLogin = new JLabel("Registra tus Datos");
 lTituloLogin.setSize(110, 30);
-lTituloLogin.setLocation(
-  (pDerecha.getWidth() - lTituloLogin.getWidth()) / 2,
-  60
-);
+lTituloLogin.setLocation((pDerecha.getWidth() - lTituloLogin.getWidth()) / 2, 60);
 lTituloLogin.setForeground(Color.DARK_GRAY);
 pDerecha.add(lTituloLogin);
 
 lNotificaciones = new JLabel("¿Recibir Notificaciones?");
 lNotificaciones.setSize(140, 20);
-lNotificaciones.setLocation(
-  (pDerecha.getWidth() - lNotificaciones.getWidth()) / 2,
-  370
-);
+lNotificaciones.setLocation((pDerecha.getWidth() - lNotificaciones.getWidth()) / 2, 370);
 lNotificaciones.setForeground(Color.DARK_GRAY);
 pDerecha.add(lNotificaciones);
 ```
@@ -264,10 +258,7 @@ Al igual que con los Label estos pueden recibir un String por parámetro desde e
 
 ```javascript
 tNombreUsuario.setSize(300, 40);
-tNombreUsuario.setLocation(
-  (pDerecha.getWidth() - tNombreUsuario.getWidth()) / 2,
-  120
-);
+tNombreUsuario.setLocation((pDerecha.getWidth() - tNombreUsuario.getWidth()) / 2, 120);
 tNombreUsuario.setForeground(Color.DARK_GRAY);
 tNombreUsuario.setBackground(Color.WHITE);
 tNombreUsuario.setCaretColor(Color.BLUE);
@@ -318,10 +309,7 @@ tClaveUsuario = new JPasswordField("clave Usuario");
 
 ```javascript
 tClaveUsuario.setSize(300, 40);
-tClaveUsuario.setLocation(
-  (pDerecha.getWidth() - tClaveUsuario.getWidth()) / 2,
-  240
-);
+tClaveUsuario.setLocation((pDerecha.getWidth() - tClaveUsuario.getWidth()) / 2, 240);
 tClaveUsuario.setForeground(Color.DARK_GRAY);
 tClaveUsuario.setCaretColor(Color.BLUE);
 tClaveUsuario.setHorizontalAlignment(SwingConstants.CENTER);
