@@ -94,7 +94,7 @@ Los Paneles son la mejor forma de identificar partes de una ventana y modulariza
 
 Para el ejemplo de esta clase se van a crear 2 paneles (los mismos que se han creado para el ejemplo de las etapas de la creación de objetos gráficos). Una cosa a resaltar es que en la declaración de los paneles las variables (objetos) empiezan con una p minúscula seguido del nombre arbitrario de la variable, ahora nos concentraremos en explicar los métodos de configuración.
 
-```javascript
+```c#
 pIzquierda.setSize(600, 500);
 pIzquierda.setLocation(0, 0);
 pIzquierda.setBackground(Color.BLUE);
