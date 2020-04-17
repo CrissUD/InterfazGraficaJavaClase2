@@ -94,7 +94,7 @@ Los Paneles son la mejor forma de identificar partes de una ventana y modulariza
 
 Para el ejemplo de esta clase se van a crear 2 paneles (los mismos que se han creado para el ejemplo de las etapas de la creación de objetos gráficos). Una cosa a resaltar es que en la declaración de los paneles las variables (objetos) empiezan con una p minúscula seguido del nombre arbitrario de la variable, ahora nos concentraremos en explicar los métodos de configuración.
 
-```c#
+```javascript
 pIzquierda.setSize(600, 500);
 pIzquierda.setLocation(0, 0);
 pIzquierda.setBackground(Color.BLUE);
@@ -117,7 +117,7 @@ Hasta el momento nuestra ventana se ve algo asi:
 
 Por ahora todo luce bien, sin embargo hay una propiedad crucial que nos hemos saltado y mas adelante recalcaremos. Los colores se pusieron a propósito para verificar la existencia de los paneles en la ventana, por ahora pondremos el color de fondo del panel **pDerecha** de color blanco.
 
-```
+```javascript
 pDerecha.setBackground(Color.WHITE);
 ```
 
@@ -138,7 +138,7 @@ Para empezar podemos colocar un título en nuestra interfaz, para esto crearemos
 
 ### Declaración
 
-```
+```javascript
 private JLabel lTituloApp;
 ```
 
@@ -146,7 +146,7 @@ La variable (objeto) que creemos para los label empezaran con l minúscula segui
 
 ### Ejemplificación
 
-```
+```javascript
 lTituloApp = new JLabel("Login de Usuario");
 ```
 
@@ -154,7 +154,7 @@ Se puede notar que cuando se ejemplifica el objeto de tipo JLabel este puede rec
 
 ### Configuración
 
-```
+```javascript
 lTituloApp.setBounds(100, 20, 200, 30);
 lTituloApp.setForeground(Color.WHITE);
 ```
@@ -165,13 +165,13 @@ Puede notarse que en esta ocasión se utilizo el método **setBounds** en realid
 
 ### Adición
 
-```
+```javascript
 pIzquierda.add(lTituloApp);
 ```
 
 Puede observarse que este objeto se añadirá al panel de la izquierda y no en la ventana. Ahora bien si intentamos correr nuestra aplicación y ver nuestro label podemos notar que este no se posiciono exactamente donde lo queríamos, ¿no se ve muy claro? ahora haremos un pequeño cambio. Posicionando nuestro objeto 100 pixeles mas hacia abajo.
 
-```
+```javascript
 lTituloApp.setBounds(100, 120, 200, 30);
 ```
 
@@ -181,7 +181,7 @@ Corremos nuestra aplicación y esta en la misma posición que antes.
 
 Esto se debe al manager de posicionamiento de Java que por defecto maneja un Layout predeterminado, el cual tratará de dejar nuestros objetos en la parte central superior de nuestra pantalla, el problema ocurre cuando tenemos dos o mas objetos y este tratara de dividir el panel de forma equitativa para posicionarlos y esto no es lo que queremos muchas veces. Para esto debemos configurar nuestra ventana y nuestros paneles para que deje nula esa propiedad y **seamos nosotros quienes posicionemos nuestros objetos mediante posicionamiento en pixeles.**
 
-```
+```javascript
 pDerecha.setLayout(null);
 pIzquierda.setLayout(null);
 setLayout(null); // configuración de la ventana
@@ -189,17 +189,17 @@ setLayout(null); // configuración de la ventana
 
 Una vez corras la aplicación veras como el Label esta donde queríamos. Pero lo dejaremos como estaba al comienzo quitándole esos 100 pixeles, solo fue en forma de prueba.
 
-```
+```javascript
 lTituloApp.setBounds(100, 20, 200, 30);
 ```
 
 También vamos a añadir 3 label mas:
 
-```
+```javascript
 private JLabel lTituloApp, lEslogan, lTituloLogin, lNotificaciones;
 ```
 
-```
+```javascript
 lEslogan = new JLabel("Te ayudamos en todo");
 lEslogan.setSize(130, 20);
 lEslogan.setLocation((pDerecha.getWidth() - lEslogan.getWidth()) / 2, 40);
@@ -208,13 +208,19 @@ pDerecha.add(lEslogan);
 
 lTituloLogin = new JLabel("Registra tus Datos");
 lTituloLogin.setSize(110, 30);
-lTituloLogin.setLocation((pDerecha.getWidth() - lTituloLogin.getWidth()) / 2, 60);
+lTituloLogin.setLocation(
+  (pDerecha.getWidth() - lTituloLogin.getWidth()) / 2,
+  60
+);
 lTituloLogin.setForeground(Color.DARK_GRAY);
 pDerecha.add(lTituloLogin);
 
 lNotificaciones = new JLabel("¿Recibir Notificaciones?");
 lNotificaciones.setSize(140, 20);
-lNotificaciones.setLocation((pDerecha.getWidth() - lNotificaciones.getWidth()) / 2, 370);
+lNotificaciones.setLocation(
+  (pDerecha.getWidth() - lNotificaciones.getWidth()) / 2,
+  370
+);
 lNotificaciones.setForeground(Color.DARK_GRAY);
 pDerecha.add(lNotificaciones);
 ```
@@ -240,7 +246,7 @@ Para este caso necesitamos un JTextField para que el cliente pueda escribir el n
 
 ### Declaración
 
-```
+```javascript
 private JTextField tNombreUsuario;
 ```
 
@@ -248,7 +254,7 @@ La variable (objeto) que creemos para los textField empezaran con t minúscula s
 
 ### Ejemplificación
 
-```
+```javascript
 tNombreUsuario = new JTextField("Nombre Usuario");
 ```
 
@@ -256,9 +262,12 @@ Al igual que con los Label estos pueden recibir un String por parámetro desde e
 
 ### Configuración
 
-```
+```javascript
 tNombreUsuario.setSize(300, 40);
-tNombreUsuario.setLocation((pDerecha.getWidth() - tNombreUsuario.getWidth()) / 2, 120);
+tNombreUsuario.setLocation(
+  (pDerecha.getWidth() - tNombreUsuario.getWidth()) / 2,
+  120
+);
 tNombreUsuario.setForeground(Color.DARK_GRAY);
 tNombreUsuario.setBackground(Color.WHITE);
 tNombreUsuario.setCaretColor(Color.BLUE);
@@ -275,7 +284,7 @@ Como los anteriores objetos gráficos tiene algunas configuraciones que ya hemos
 
 Para asegurarnos de que nuestros JLabel también queden centrados vamos a añadir esa propiedad en la configuración de estos, aunque aquí se muestra que están seguidas estas configuraciones en nuestro código las vamos a colocar en las respectivas configuraciones de cada uno de los labels que creamos.
 
-```
+```javascript
 lEslogan.setHorizontalAlignment(SwingConstants.CENTER);
 lTituloLogin.setHorizontalAlignment(SwingConstants.CENTER);
 lNotificaciones.setHorizontalAlignment(SwingConstants.CENTER);
@@ -283,7 +292,7 @@ lNotificaciones.setHorizontalAlignment(SwingConstants.CENTER);
 
 ### Adición
 
-```
+```javascript
 pDerecha.add(tNombreUsuario);
 ```
 
@@ -293,7 +302,7 @@ Los JPassworldField son campos de texto donde el usuario va a escribir sin embar
 
 ### Declaración
 
-```
+```javascript
 private JPasswordField tClaveUsuario;
 ```
 
@@ -301,15 +310,18 @@ La variable (objeto) que creemos para los JPassworldField empezaran con t minús
 
 ### Ejemplificación
 
-```
+```javascript
 tClaveUsuario = new JPasswordField("clave Usuario");
 ```
 
 ### Configuración
 
-```
+```javascript
 tClaveUsuario.setSize(300, 40);
-tClaveUsuario.setLocation((pDerecha.getWidth() - tClaveUsuario.getWidth()) / 2, 240);
+tClaveUsuario.setLocation(
+  (pDerecha.getWidth() - tClaveUsuario.getWidth()) / 2,
+  240
+);
 tClaveUsuario.setForeground(Color.DARK_GRAY);
 tClaveUsuario.setCaretColor(Color.BLUE);
 tClaveUsuario.setHorizontalAlignment(SwingConstants.CENTER);
@@ -317,7 +329,7 @@ tClaveUsuario.setHorizontalAlignment(SwingConstants.CENTER);
 
 ### Adición
 
-```
+```javascript
 pDerecha.add(tClaveUsuario);
 ```
 
@@ -331,7 +343,7 @@ En este caso usaremos un ComboBox para escoger el tipo de usuario:
 
 ### Declaración
 
-```
+```javascript
 private JComboBox cbTipoUsuario;
 ```
 
@@ -339,13 +351,13 @@ La variable (objeto) que creemos para los JComboBox empezaran con cb minúscula 
 
 ### Ejemplificación
 
-```
+```javascript
 cbTipoUsuario = new JComboBox();
 ```
 
 ### Configuración
 
-```
+```javascript
 cbTipoUsuario.addItem("Cliente");
 cbTipoUsuario.addItem("Cajero");
 cbTipoUsuario.addItem("Administrador");
@@ -363,7 +375,7 @@ A parte de las configuraciones que ya se vieron antes en este caso existen dos p
 
 ### Adición
 
-```
+```javascript
 pDerecha.add(cbTipoUsuario);
 ```
 
@@ -373,7 +385,7 @@ Los botones son la forma mas común con la que un usuario podrá interactuar con
 
 ### Declaración
 
-```
+```javascript
 private JButton bEntrar;
 ```
 
@@ -381,7 +393,7 @@ La variable (objeto) que creemos para los JButton empezaran con b minúscula seg
 
 ### Ejemplificación
 
-```
+```javascript
 bEntrar = new JButton("Entrar");
 ```
 
@@ -389,7 +401,7 @@ Un Botón puede recibir por parámetro en el constructor un String que represent
 
 ### Configuración
 
-```
+```javascript
 bEntrar.setSize(250, 45);
 bEntrar.setLocation((pDerecha.getWidth() - bEntrar.getWidth()) / 2, 300);
 bEntrar.setBackground(Color.BLUE);
@@ -414,7 +426,7 @@ A parte de las configuraciones que ya se vieron antes en este caso existen dos p
 
 ### Adición
 
-```
+```javascript
 pDerecha.add(bEntrar);
 ```
 
@@ -427,11 +439,11 @@ Hasta el momento nuestra interfaz se ve asi:
 
 Vamos añadir 5 botones más con lo que aprendimos, estos botones por esta clase no tendrán propósito pero mas adelante si lo tendrán:
 
-```
+```javascript
 private JButton bEntrar, bCerrar, bRegistrarse, bOpcion1, bOpcion2, bOpcion3;
 ```
 
-```
+```javascript
 bCerrar = new JButton("X");
 bCerrar.setBounds(330, 10, 45, 30);
 bCerrar.setFocusable(false);
@@ -475,7 +487,7 @@ Los CheckButton normalmente son usados para cubrir estados de varias opciones, p
 
 ### Declaración
 
-```
+```javascript
 private JCheckBox checkSi, checkNo;
 ```
 
@@ -483,14 +495,14 @@ La variable (objeto) que creemos para los JCheckButton empezaran con check en mi
 
 ### Ejemplificación
 
-```
+```javascript
 checkSi = new JCheckBox("Si");
 checkNo = new JCheckBox("No");
 ```
 
 ### Configuración
 
-```
+```javascript
 checkSi.setSize(45, 25);
 checkSi.setFocusable(false);
 checkSi.setBackground(Color.WHITE);
@@ -504,7 +516,7 @@ checkNo.setLocation((pDerecha.getWidth() + checkNo.getWidth()) / 2 - 15, 345);
 
 ### Adición
 
-```
+```javascript
 pDerecha.add(checkSi);
 pDerecha.add(checkNo);
 ```
@@ -524,7 +536,7 @@ Este es un objeto gráfico auxiliar que nos ayuda a agrupar objetos en un contex
 
 ### Declaración
 
-```
+```javascript
 private ButtonGroup grupo;
 ```
 
@@ -532,13 +544,13 @@ La variable (objeto) que creemos para los ButtonGroup empezaran con grupo en min
 
 ### Ejemplificación
 
-```
+```javascript
 grupo = new ButtonGroup();
 ```
 
 ### Configuración
 
-```
+```javascript
 grupo.add(checkSi);
 grupo.add(checkNo);
 ```
@@ -553,7 +565,7 @@ En este caso nuestra interfaz no tendrá RadioButtons pero a continuación se mu
 
 ### Declaración
 
-```
+```javascript
 private JRadioButton rbOpcion1, rbOpcion2;
 ```
 
@@ -561,21 +573,21 @@ La variable (objeto) que creemos para los JRadioButton empezaran con rb en minú
 
 ### Ejemplificación
 
-```
-rbOpcion1= new JRadioButton("opcion1");
-rbOpcion2= new JRadioButton("opcion2");
+```javascript
+rbOpcion1 = new JRadioButton("opcion1");
+rbOpcion2 = new JRadioButton("opcion2");
 ```
 
 ### Configuración
 
-```
+```javascript
 rbOpcion1.setBounds(50, 400, 120, 30);
 rbOpcion2.setBounds(200, 400, 120, 30);
 ```
 
 ### Adición
 
-```
+```javascript
 pIzquierda.add(rbOpcion1);
 pIzquierda.add(rbOpcion2);
 ```
@@ -586,7 +598,7 @@ Un objeto gráfico textArea expande un poco el concepto de los textField ya que 
 
 ### Declaración
 
-```
+```javascript
 private JTextArea taSugerencias;
 ```
 
@@ -594,19 +606,19 @@ La variable (objeto) que creemos para los JTextArea empezaran con ta en minúscu
 
 ### Ejemplificación
 
-```
-taSugerencias= new JTextArea("Escribe algo...");
+```javascript
+taSugerencias = new JTextArea("Escribe algo...");
 ```
 
 ### Configuración
 
-```
+```javascript
 taSugerencias.setBounds(185, 180, 230, 140);
 ```
 
 ### Adición
 
-```
+```javascript
 pIzquierda.add(taSugerencias);
 ```
 
