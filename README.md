@@ -298,7 +298,7 @@ pDerecha.add(tNombreUsuario);
 
 ## JPassworldField
 
-Los JPassworldField son campos de texto donde el usuario va a escribir sin embargo por cuestiones de seguridad la información proporcionada por el cliente no debe ser mostrada en pantalla. Como su nombre lo indica este objeto Gráfico muchas veces se utiliza para el ingreso de Contraseñas.
+Los JPassworldField son campos de texto donde el usuario va a escribir, sin embargo por cuestiones de seguridad la información proporcionada por el cliente no debe ser mostrada en pantalla. Como su nombre lo indica este objeto Gráfico muchas veces se utiliza para el ingreso de Contraseñas.
 
 ### Declaración
 
