@@ -17,6 +17,14 @@ Curso propuesto por el grupo de trabajo Semana de Ingenio y Diseño (**SID**) de
 
 # Etapas de Creación de un Objeto Gráfico
 
+Las etapas de la creación de objetos gráficos son 3 principales, sin embargo la segunda se compone a su vez de dos etapas:
+
+* **Declaración**
+* **Construcción**
+  * **Ejemplificación**
+  * **Configuración**
+* **Adición / Agregación**
+
 ## **Declaración**
 
 La declaración de un objeto gráfico consiste en indicarle al sistema que la clase donde se esta trabajando tendrá un atributo de algún tipo de estos objetos. Esta declaración tiene 3 partes, estas son:
