@@ -34,7 +34,7 @@ La declaración de un objeto gráfico consiste en indicarle al sistema que la cl
 - **Variable:** El nombre que el programador elija darle y sera esta el objeto por el cual se podrá acceder a sus métodos.
 
 <div align="center">
-  <img  src="./resources/declaracion.png">
+  <img  src="https://i.imgur.com/jAS06zg.png">
   <p>Declaración de dos objetos gráficos tipo JPanel con sus 3 partes</p>
 </div>
 
@@ -43,7 +43,7 @@ La declaración de un objeto gráfico consiste en indicarle al sistema que la cl
 La ejemplificación del objeto Gráfico consiste en darle un valor inicial al objeto y para esto es necesario llamar al constructor de la clase, **este paso es importante y sin él no es posible realizar la configuración**. Para este curso la ejemplificación, configuración y adición se realizará dentro del **constructor** de nuestra clase.
 
 <div align="center">
-  <img  src="./resources/ejemplificacion.png">
+  <img  src="https://i.imgur.com/ZZkNe24.png">
   <p>Ejemplificación de dos objetos gráficos tipo JPanel</p>
 </div>
 
@@ -52,7 +52,7 @@ La ejemplificación del objeto Gráfico consiste en darle un valor inicial al ob
 La configuración es la etapa donde llamaremos todos los métodos proporcionados por la clase del objeto gráfico para darle propiedades gráficas y este pueda verse en la pantalla. Mas adelante se explicara el propósito de cada método, por ahora solo se mostrara un ejemplo.
 
 <div align="center">
-  <img  src="./resources/configuracion.png">
+  <img  src="https://i.imgur.com/6dFUIdW.png">
   <p>Configuración de dos objetos gráficos justo después de haberse ejemplificado </p>
 </div>
 
@@ -61,14 +61,14 @@ La configuración es la etapa donde llamaremos todos los métodos proporcionados
 Hasta el momento el objeto gráfico esta listo para ser mostrado sin embargo no sera mostrado aun, para esto es necesario adicionarlo a su objeto padre, en este caso el objeto padre es la ventana. Con el método **add()** se puede añadir el objeto gráfico configurado.
 
 <div align="center">
-  <img  src="./resources/adicion1.png">
+  <img  src="https://i.imgur.com/SGd5Vdf.png">
   <p>Adición de dos objetos gráficos una vez se hayan configurado </p>
 </div>
 
 Puede verse en la anterior imagen que la forma de añadir elementos gráficos en la ventana consiste en llamar **this.add()**. La palabra clave **this** hace referencia a que se esta llamando a la misma clase donde se esta codificando. Sin embargo pueden existir algunos objetos gráficos que queremos añadir no en la ventana principal, sino en un Panel por ejemplo. A continuación se muestra como se podría hacer esto.
 
 <div align="center">
-  <img  src="./resources/adicion2.png">
+  <img  src="https://i.imgur.com/LVFbNYX.png">
   <p>Adición de objetos gráficos dentro de Paneles </p>
 </div>
 
@@ -92,7 +92,7 @@ En esta sección aprenderemos la forma de crear objetos gráficos para ser mostr
 Recordando la clase 1 vamos a crear una clase que se llamara **LoginTemplate** y configuraremos la ventana.
 
 <div align="center">
-  <img  src="./resources/clase1.png">
+  <img  src="https://i.imgur.com/NKispPX.png">
   <p>Clase de login de usuario</p>
 </div>
 
@@ -119,7 +119,7 @@ Los métodos **setSize** y **setLocation** pueden ser reemplazados por el métod
 Hasta el momento nuestra ventana se ve algo asi:
 
 <div align="center">
-  <img  src="./resources/interfaz1.png">
+  <img  src="https://i.imgur.com/8qNlwFJ.png">
   <p>Interfaz login de usuario con 2 paneles</p>
 </div>
 
@@ -132,7 +132,7 @@ pDerecha.setBackground(Color.WHITE);
 nuestro código se vera algo asi:
 
 <div align="center">
-  <img  src="./resources/clase2.png">
+  <img  src="https://i.imgur.com/hr5bIDx.png">
   <p>Clase de login de usuario</p>
 </div>
 
@@ -236,7 +236,7 @@ Y para conocer el ancho del objeto necesitamos obligatoriamente proporcionarle d
 Nuestra ventana se ira viendo algo asi:
 
 <div align="center">
-  <img  src="./resources/interfaz2.png">
+  <img  src="https://i.imgur.com/We9d31f.png">
   <p>Interfaz login de usuario con paneles y labels</p>
 </div>
 
@@ -411,12 +411,12 @@ A parte de las configuraciones que ya se vieron antes en este caso existen dos p
 - **setFocusable:** Recibe por parámetro un booleano que por defecto esta en True, si le cambiamos la configuración a False va a quitar el cuadro por defecto que rodea al texto del botón una vez se oprima click.
 
 <div align="center">
-  <img  src="./resources/boton1.png">
+  <img  src="https://i.imgur.com/VGbHj0I.png">
   <p>Botón con SetFocusable(True)</p>
 </div>
 
 <div align="center">
-  <img  src="./resources/boton2.png">
+  <img  src="https://i.imgur.com/XOkP1Vg.png">
   <p>Botón con SetFocusable(False)</p>
 </div>
 
@@ -429,7 +429,7 @@ pDerecha.add(bEntrar);
 Hasta el momento nuestra interfaz se ve asi:
 
 <div align="center">
-  <img  src="./resources/interfaz3.png">
+  <img  src="https://i.imgur.com/IWr7Moh.png">
   <p>Interfaz login de usuario con los nuevos objetos añadidos</p>
 </div>
 
@@ -470,7 +470,7 @@ pIzquierda.add(bOpcion3);
 y nuestra interfaz se ve ahora así:
 
 <div align="center">
-  <img  src="./resources/interfaz4.png">
+  <img  src="https://i.imgur.com/TkCH9bE.png">
   <p>Interfaz login de usuario, con adición de mas botones</p>
 </div>
 
@@ -520,7 +520,7 @@ pDerecha.add(checkNo);
 En nuestra aplicación queremos tomar el enfoque de única opción, sin embargo al correr nuestra app, podemos notar que se pueden seleccionan las dos opciones.
 
 <div align="center">
-  <img  src="./resources/check1.png">
+  <img  src="https://i.imgur.com/WOUnrQs.png">
   <p>CheckBox con multiple opción</p>
 </div>
 
@@ -621,7 +621,7 @@ pIzquierda.add(taSugerencias);
 Si añadimos estos componentes nuestra interfaz se vería algo así:
 
 <div align="center">
-  <img  src="./resources/interfaz5.png">
+  <img  src="https://i.imgur.com/fs1p7IN.png">
   <p>Interfaz login de usuario con adición de JTextArea y JRadioButton</p>
 </div>
 
@@ -630,7 +630,7 @@ Sin embargo como se dijo anteriormente estos dos objetos gráficos no harán par
 # Resultado
 
 <div align="center">
-  <img  src="./resources/interfaz6.png">
+  <img  src="https://i.imgur.com/AxnqDG2.png">
   <p>Interfaz login de usuario, resultado Final</p>
 </div>
 
