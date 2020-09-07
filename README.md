@@ -10,10 +10,16 @@ Curso propuesto por el grupo de trabajo Semana de Ingenio y Diseño (**SID**) de
 
 ## Objetivos
 
-- Identificar las 4 etapas para crear objetos gráficos básicos y así ser mostrados en pantalla en una vista.
-- Aprender los métodos principales para configurar los objetos gráficos y mostrarlos por pantalla.
-- Explorar el enfoque de posicionamiento por medio de pixeles sin el uso de manager de Layouts.
-- Comprender la diferencia de adición hacia una ventana principal o hacia un panel
+- Identificar las 4 etapas involucradas en la creación de objetos gráficos básicos para ser mostrados en pantalla en una vista.
+- Reconocer los métodos principales para configurar propiedades de los objetos gráficos y así ser mostrados en la pantalla.
+- Explorar el enfoque de posicionamiento por medio de pixeles sin el uso de manager de Layout.
+- Comprender la forma de adición de objetos gráficos en distintos objetos contenedores como pueden ser Frames (Ventanas) o Paneles.
+
+# Creación de objetos gráficos 
+En esta sesión se verán conceptos relacionados con la creación de objetos gráficos y para esto se proporciona los siguientes items principales:
+* **Etapas de Creación de un Objeto Gráfico**.
+* **Creación de objetos gráficos básicos**.
+
 
 # Etapas de Creación de un Objeto Gráfico
 
@@ -27,10 +33,10 @@ Las etapas de la creación de objetos gráficos son 3 principales, sin embargo l
 
 ## **Declaración**
 
-La declaración de un objeto gráfico consiste en indicarle al sistema que la clase donde se esta trabajando tendrá un atributo de algún tipo de estos objetos. Esta declaración tiene 3 partes, estas son:
+La declaración de un objeto gráfico consiste en indicarle al sistema que la clase donde se esta trabajando tendrá un atributo de algún tipo de estos objetos. Esta declaración se suele ubicar al inicio de la clase y tiene 3 partes, estas son:
 
-- **Tipo Acceso:** El tipo de acceso sera siempre privado ya que son atributos de la clase como se discutió en la anterior clase.
-- **Tipo de Objeto Gráfico:** Se refiere a la clase del objeto que vamos a crear (JButton, JTextField, JLabel, JPanel son algunos ejemplos) y la generación de estas clases casi siempre van a necesitar la importación de la librería que soporte la creación del objeto, estas se importan automáticamente dependiendo del editor.
+- **Tipo Acceso:** El tipo de acceso a menudo será privado ya que son atributos de la clase y se debe respetar el principio de encapsulamiento como se discutió en la anterior clase.
+- **Tipo de Objeto Gráfico:** Se refiere a la clase del objeto que vamos a crear (JButton, JTextField, JLabel, JPanel son algunos ejemplos) y la generación de estas clases casi siempre van a necesitar la importación de la librería que soporte la creación del objeto, estas por lo general se importan automáticamente gracias al IDE o editor de código.
 - **Variable:** El nombre que el programador elija darle y sera esta el objeto por el cual se podrá acceder a sus métodos.
 
 <div align="center">
@@ -40,7 +46,7 @@ La declaración de un objeto gráfico consiste en indicarle al sistema que la cl
 
 ## **Ejemplificación**
 
-La ejemplificación del objeto Gráfico consiste en darle un valor inicial al objeto y para esto es necesario llamar al constructor de la clase, **este paso es importante y sin él no es posible realizar la configuración**. Para este curso la ejemplificación, configuración y adición se realizará dentro del **constructor** de nuestra clase.
+La ejemplificación del objeto Gráfico hace parte de la etapa de construcción y consiste en darle un valor inicial al objeto y para esto es necesario llamar al constructor de la clase, **este paso es importante y sin él no es posible realizar la configuración**. Para esta sesión las etapas de ejemplificación, configuración y adición se realizarán dentro del **constructor** de la clase.
 
 <div align="center">
   <img  src="https://i.imgur.com/ZZkNe24.png">
@@ -49,7 +55,7 @@ La ejemplificación del objeto Gráfico consiste en darle un valor inicial al ob
 
 ## **Configuración**
 
-La configuración es la etapa donde llamaremos todos los métodos proporcionados por la clase del objeto gráfico para darle propiedades gráficas y este pueda verse en la pantalla. Mas adelante se explicara el propósito de cada método, por ahora solo se mostrara un ejemplo.
+La configuración también hace parte de la etapa de construcción y es la etapa donde se llaman a los métodos proporcionados por la clase del objeto gráfico para darle propiedades gráficas y estas puedan verse en la pantalla. Por ahora solo se mostrara un ejemplo, sin embargo, mas adelante en esta sesión se explicará la función de cada uno de los métodos de configuración usados.
 
 <div align="center">
   <img  src="https://i.imgur.com/6dFUIdW.png">
@@ -58,14 +64,14 @@ La configuración es la etapa donde llamaremos todos los métodos proporcionados
 
 ## **Adición**
 
-Hasta el momento el objeto gráfico esta listo para ser mostrado sin embargo no sera mostrado aun, para esto es necesario adicionarlo a su objeto padre, en este caso el objeto padre es la ventana. Con el método **add()** se puede añadir el objeto gráfico configurado.
+Para este tramo el objeto gráfico esta listo para ser mostrado, sin embargo, aun no se ha creado la solicitud para que este sea agregado en la ventana, para esto es necesario adicionarlo a su objeto padre o también llamado objeto contenedor, un objeto contenedor puede ser una ventana, un panel, canvas etc. En este ejemplo el objeto padre es la ventana. Con el método **add()** se puede añadir el objeto gráfico.
 
 <div align="center">
   <img  src="https://i.imgur.com/SGd5Vdf.png">
-  <p>Adición de dos objetos gráficos una vez se hayan configurado </p>
+  <p>Adición de dos objetos gráficos una vez se hayan declarado, ejemplificado y configurado. </p>
 </div>
 
-Puede verse en la anterior imagen que la forma de añadir elementos gráficos en la ventana consiste en llamar **this.add()**. La palabra clave **this** hace referencia a que se esta llamando a la misma clase donde se esta codificando. Sin embargo pueden existir algunos objetos gráficos que queremos añadir no en la ventana principal, sino en un Panel por ejemplo. A continuación se muestra como se podría hacer esto.
+Puede verse en la anterior imagen que la forma de añadir elementos gráficos en la ventana consiste en llamar **this.add()** ya que la clase extiende de un JFrame. La palabra clave **this** hace referencia a que se esta llamando a la misma clase donde se esta codificando. Sin embargo pueden existir algunos objetos gráficos que no queremos añadir directamente en la ventana, se podrían añadir en un panel por ejemplo. A continuación se muestra como se podría hacer esto.
 
 <div align="center">
   <img  src="https://i.imgur.com/LVFbNYX.png">
@@ -74,12 +80,12 @@ Puede verse en la anterior imagen que la forma de añadir elementos gráficos en
 
 # Creación de objetos gráficos básicos.
 
-En esta sección aprenderemos la forma de crear objetos gráficos para ser mostrados en pantalla, basándonos en los 4 pasos que acabamos de ver. Los objetos explicados a continuación serán:
+En esta sección se verá la forma de crear objetos gráficos para ser mostrados en pantalla, basado en los 4 pasos que se acabaron de explicar. Los objetos explicados a continuación serán:
 
 - **JPanel**
 - **JLabel**
 - **JTextField**
-- **JPassworldField**
+- **JPasswordField**
 - **JComboBox**
 - **JButton**
 - **JCheckBox**
@@ -116,7 +122,7 @@ Los métodos **setSize** y **setLocation** pueden ser reemplazados por el métod
 
 - **setBounds:** Que recibe por parámetros 4 números enteros de los cuales los dos primeros representan la posición y los dos últimos el tamaño **(x, y, ancho, alto)**
 
-Hasta el momento nuestra ventana se ve algo asi:
+Hasta el momento la ventana se ve asi:
 
 <div align="center">
   <img  src="https://i.imgur.com/8qNlwFJ.png">
@@ -129,7 +135,7 @@ Por ahora todo luce bien, sin embargo hay una propiedad crucial que nos hemos sa
 pDerecha.setBackground(Color.WHITE);
 ```
 
-nuestro código se vera algo asi:
+El código se ve asi:
 
 <div align="center">
   <img  src="https://i.imgur.com/hr5bIDx.png">
@@ -140,9 +146,9 @@ Cabe resaltar que la configuración de la ventana siempre ira de ultimas, si se 
 
 ## JLabel
 
-Los label en nuestras interfaces son textos que queremos mostrar en pantalla y que el usuario no podrá cambiar, normalmente los usamos para dar indicaciones, títulos, subtítulos etc.
+Los label en las interfaces gráficas son textos que queremos mostrar en pantalla y que el usuario no podrá cambiar, normalmente los usamos para dar indicaciones, títulos, subtítulos etc.
 
-Para empezar podemos colocar un título en nuestra interfaz, para esto crearemos un JLabel (Realizando los 4 pasos anteriores)
+Para empezar podemos colocar un título en la interfaz, para esto crearemos un JLabel (Realizando los 4 pasos anteriores)
 
 ### Declaración
 
@@ -177,17 +183,17 @@ Puede notarse que en esta ocasión se utilizo el método **setBounds** en realid
 pIzquierda.add(lTituloApp);
 ```
 
-Puede observarse que este objeto se añadirá al panel de la izquierda y no en la ventana. Ahora bien si intentamos correr nuestra aplicación y ver nuestro label podemos notar que este no se posiciono exactamente donde lo queríamos, ¿no se ve muy claro? ahora haremos un pequeño cambio. Posicionando nuestro objeto 100 pixeles mas hacia abajo.
+Puede observarse que este objeto se añadirá al panel de la izquierda y no en la ventana. Ahora bien si intentamos correr la aplicación para ver el label podemos notar que este no se posiciono exactamente donde lo queríamos, ¿no se ve muy claro? ahora haremos un pequeño cambio. Posicionando el objeto 100 pixeles mas hacia abajo.
 
 ```javascript
 lTituloApp.setBounds(100, 120, 200, 30);
 ```
 
-Corremos nuestra aplicación y esta en la misma posición que antes.
+Corremos la aplicación y esta en la misma posición que antes.
 
 **¿Por que esta pasando esto?**
 
-Esto se debe al manager de posicionamiento de Java que por defecto maneja un Layout predeterminado, el cual tratará de dejar nuestros objetos en la parte central superior de nuestra pantalla, el problema ocurre cuando tenemos dos o mas objetos y este tratara de dividir el panel de forma equitativa para posicionarlos y esto no es lo que queremos muchas veces. Para esto debemos configurar nuestra ventana y nuestros paneles para que deje nula esa propiedad y **seamos nosotros quienes posicionemos nuestros objetos mediante posicionamiento en pixeles.**
+Esto se debe al manager de posicionamiento de Java que por defecto maneja un Layout predeterminado, el cual tratará de dejar los objetos en la parte central superior de la pantalla, el problema ocurre cuando tenemos dos o mas objetos y este tratara de dividir el panel de forma equitativa para posicionarlos y esto no es lo que queremos muchas veces. Para esto debemos configurar las ventana y los paneles para que deje nula esa propiedad y **seamos nosotros quienes posicionemos los objetos mediante posicionamiento en pixeles.**
 
 ```javascript
 pDerecha.setLayout(null);
@@ -233,7 +239,7 @@ En el anterior código se resalta la importancia de cuando usar el enfoque de ta
 
 Y para conocer el ancho del objeto necesitamos obligatoriamente proporcionarle de la propiedad de tamaño usando **setSize**. Si usamos **setBounds** al pedirnos los 4 datos al tiempo este no tendrá aun un ancho definido y no podrá calcularse la anterior operación.
 
-Nuestra ventana se ira viendo algo asi:
+La ventana se esta viendo así:
 
 <div align="center">
   <img  src="https://i.imgur.com/We9d31f.png">
@@ -281,7 +287,7 @@ Como los anteriores objetos gráficos tiene algunas configuraciones que ya hemos
 
 **Paréntesis**
 
-Para asegurarnos de que nuestros JLabel también queden centrados vamos a añadir esa propiedad en la configuración de estos, aunque aquí se muestra que están seguidas estas configuraciones en nuestro código las vamos a colocar en las respectivas configuraciones de cada uno de los labels que creamos.
+Para asegurarnos de que los JLabel también queden centrados vamos a añadir esa propiedad en la configuración de estos, aunque aquí se muestra que están seguidas estas configuraciones en el código las vamos a colocar en las respectivas configuraciones de cada uno de los labels que creamos.
 
 ```javascript
 lEslogan.setHorizontalAlignment(SwingConstants.CENTER);
@@ -426,7 +432,7 @@ A parte de las configuraciones que ya se vieron antes en este caso existen dos p
 pDerecha.add(bEntrar);
 ```
 
-Hasta el momento nuestra interfaz se ve asi:
+Hasta el momento la interfaz se ve asi:
 
 <div align="center">
   <img  src="https://i.imgur.com/IWr7Moh.png">
@@ -467,7 +473,7 @@ bOpcion3.setBounds(10, 280, 30, 20);
 pIzquierda.add(bOpcion3);
 ```
 
-y nuestra interfaz se ve ahora así:
+y la interfaz se ve ahora así:
 
 <div align="center">
   <img  src="https://i.imgur.com/TkCH9bE.png">
@@ -517,7 +523,7 @@ pDerecha.add(checkSi);
 pDerecha.add(checkNo);
 ```
 
-En nuestra aplicación queremos tomar el enfoque de única opción, sin embargo al correr nuestra app, podemos notar que se pueden seleccionan las dos opciones.
+En la aplicación queremos tomar el enfoque de única opción, sin embargo al correr el app, podemos notar que se pueden seleccionan las dos opciones.
 
 <div align="center">
   <img  src="https://i.imgur.com/WOUnrQs.png">
@@ -557,7 +563,7 @@ En la configuración es donde se van añadir los botones que pertenecen a un mis
 
 Los RadioButton cumplen la misma función que los checkButton, es mas de elección del desarrollador cual de los dos quiera usar. De nuevo tienen los enfoques de multiples opciones o única opción utilizando un buttonGroup.
 
-En este caso nuestra interfaz no tendrá RadioButtons pero a continuación se muestra un ejemplo para su creación.
+En este caso la interfaz no tendrá RadioButtons pero a continuación se muestra un ejemplo para su creación.
 
 ### Declaración
 
@@ -590,7 +596,7 @@ pIzquierda.add(rbOpcion2);
 
 ## JTextArea
 
-Un objeto gráfico textArea expande un poco el concepto de los textField ya que soporta una mayor cantidad de texto y esta diseñado justamente para recibir grandes cantidades de texto. A continuación se muestra una breve explicación de su creación ya que esta tampoco hará parte de nuestra interfaz:
+Un objeto gráfico textArea expande un poco el concepto de los textField ya que soporta una mayor cantidad de texto y esta diseñado justamente para recibir grandes cantidades de texto. A continuación se muestra una breve explicación de su creación ya que esta tampoco hará parte de esta interfaz:
 
 ### Declaración
 
@@ -618,14 +624,14 @@ taSugerencias.setBounds(185, 180, 230, 140);
 pIzquierda.add(taSugerencias);
 ```
 
-Si añadimos estos componentes nuestra interfaz se vería algo así:
+Si añadimos estos componentes la interfaz se vería algo así:
 
 <div align="center">
   <img  src="https://i.imgur.com/fs1p7IN.png">
   <p>Interfaz login de usuario con adición de JTextArea y JRadioButton</p>
 </div>
 
-Sin embargo como se dijo anteriormente estos dos objetos gráficos no harán parte de nuestra interfaz asi que por ahora se comentaran estas partes en nuestro código.
+Sin embargo como se dijo anteriormente estos dos objetos gráficos no harán parte de esta interfaz asi que por ahora se comentaran estas partes en el código.
 
 # Resultado
 
@@ -634,7 +640,7 @@ Sin embargo como se dijo anteriormente estos dos objetos gráficos no harán par
   <p>Interfaz login de usuario, resultado Final</p>
 </div>
 
-Este es nuestro resultado, hasta el momento aprendimos la configuración de objetos básicos y los mostramos en pantalla. En la siguiente clase aprenderemos sobre objetos decoradores para hacer que nuestra interfaz se vea mucho mas agradable a la vista del usuario.
+Este es el resultado, hasta el momento aprendimos la configuración de objetos básicos y los mostramos en pantalla. En la siguiente clase aprenderemos sobre objetos decoradores para hacer que la interfaz se vea mucho mas agradable a la vista del usuario.
 
 # Actividades
 
