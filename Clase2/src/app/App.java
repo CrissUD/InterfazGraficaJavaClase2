@@ -8,8 +8,8 @@ public class App {
   public static void main(String[] args) {
     Runnable runApplication = new Runnable() {
       public void run(){
-        LoginTemplate vista = new LoginTemplate();
-        vista.getClass();
+        LoginTemplate login = new LoginTemplate();
+        login.getClass();
       }
     };
     SwingUtilities.invokeLater(runApplication);

@@ -54,8 +54,8 @@ public class LoginTemplate extends JFrame {
     lEslogan = new JLabel("Te ayudamos en todo");
     lEslogan.setSize(130, 20);
     lEslogan.setLocation((pDerecha.getWidth() - lEslogan.getWidth()) / 2, 40);
-    lEslogan.setHorizontalAlignment(SwingConstants.CENTER);
     lEslogan.setForeground(Color.DARK_GRAY);
+    lEslogan.setHorizontalAlignment(SwingConstants.CENTER);
     pDerecha.add(lEslogan);
 
     lTituloLogin = new JLabel("Registra tus Datos");
