@@ -301,9 +301,9 @@ lNotificaciones.setHorizontalAlignment(SwingConstants.CENTER);
 pDerecha.add(tNombreUsuario);
 ```
 
-## JPassworldField
+## JPasswordField
 
-Los JPassworldField son campos de texto donde el usuario va a escribir, sin embargo por cuestiones de seguridad la información proporcionada por el cliente no debe ser mostrada en pantalla. Como su nombre lo indica este objeto Gráfico muchas veces se utiliza para el ingreso de Contraseñas.
+Los JPasswordField son campos de texto donde el usuario va a escribir, sin embargo por cuestiones de seguridad la información proporcionada por el cliente no debe ser mostrada en pantalla. Como su nombre lo indica este objeto gráfico muchas veces se utiliza para el ingreso de contraseñas.
 
 ### Declaración
 
@@ -311,7 +311,7 @@ Los JPassworldField son campos de texto donde el usuario va a escribir, sin emba
 private JPasswordField tClaveUsuario;
 ```
 
-La variable (objeto) que creemos para los JPassworldField empezaran con t minúscula seguido del nombre de la variable.
+La variable (objeto) que creemos para los JPasswordField empezaran con t minúscula seguido del nombre de la variable.
 
 ### Ejemplificación
 
@@ -383,7 +383,7 @@ pDerecha.add(cbTipoUsuario);
 
 ## JButton
 
-Los botones son la forma mas común con la que un usuario podrá interactuar con las interfaces gráficas. Estos botones generan acciones que el usuario puede activar al dar Click sobre estos, entre algunas opciones, puede estar el envió de información, traer información, abrir otras secciones etc.
+Los botones son la forma mas común con la que un usuario podrá interactuar con las interfaces gráficas. Estos botones generan acciones que el usuario puede activar al dar Click sobre estos, entre algunas opciones, puede estar el envío de información, traer información, abrir otras secciones etc.
 
 ### Declaración
 
@@ -527,7 +527,7 @@ En la aplicación queremos tomar el enfoque de única opción, sin embargo al co
 
 <div align="center">
   <img  src="https://i.imgur.com/WOUnrQs.png">
-  <p>CheckBox con multiple opción</p>
+  <p>CheckBox con múltiple opción</p>
 </div>
 
 Para obtener el enfoque de única opción debemos configurar el siguiente objeto.
@@ -561,7 +561,7 @@ En la configuración es donde se van añadir los botones que pertenecen a un mis
 
 ## JRadioButton
 
-Los RadioButton cumplen la misma función que los checkButton, es mas de elección del desarrollador cual de los dos quiera usar. De nuevo tienen los enfoques de multiples opciones o única opción utilizando un buttonGroup.
+Los RadioButton cumplen la misma función que los checkButton, es mas de elección del desarrollador cual de los dos quiera usar. De nuevo tienen los enfoques de múltiples opciones o única opción utilizando un buttonGroup.
 
 En este caso la interfaz no tendrá RadioButtons pero a continuación se muestra un ejemplo para su creación.
 
