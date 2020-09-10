@@ -59,7 +59,7 @@ public class LoginTemplate extends JFrame {
     pDerecha.add(lEslogan);
 
     lTituloLogin = new JLabel("Registra tus Datos");
-    lTituloLogin.setSize(110, 30);
+    lTituloLogin.setSize(150, 30);
     lTituloLogin.setLocation((pDerecha.getWidth() - lTituloLogin.getWidth()) / 2, 60);
     lTituloLogin.setForeground(Color.DARK_GRAY);
     lTituloLogin.setHorizontalAlignment(SwingConstants.CENTER);
@@ -73,7 +73,7 @@ public class LoginTemplate extends JFrame {
     pDerecha.add(lNotificaciones);
 
     tNombreUsuario = new JTextField("Nombre Usuario");
-    tNombreUsuario.setSize(300, 40);
+    tNombreUsuario.setSize(260, 40);
     tNombreUsuario.setLocation((pDerecha.getWidth() - tNombreUsuario.getWidth()) / 2, 120);
     tNombreUsuario.setForeground(Color.DARK_GRAY);
     tNombreUsuario.setBackground(Color.WHITE);
@@ -82,7 +82,7 @@ public class LoginTemplate extends JFrame {
     pDerecha.add(tNombreUsuario);
 
     tClaveUsuario = new JPasswordField("clave Usuario");
-    tClaveUsuario.setSize(300, 40);
+    tClaveUsuario.setSize(260, 40);
     tClaveUsuario.setLocation((pDerecha.getWidth() - tClaveUsuario.getWidth()) / 2, 240);
     tClaveUsuario.setForeground(Color.DARK_GRAY);
     tClaveUsuario.setCaretColor(Color.BLUE);
