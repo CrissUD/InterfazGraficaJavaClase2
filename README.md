@@ -182,7 +182,7 @@ Se puede notar que cuando se ejemplifica el objeto de tipo JLabel este puede rec
 * **Configuración**
 ```javascript
 // Dentro del constructor
-lTituloApp.setBounds(100, 20, 200, 30);
+lTituloApp.setBounds(100, 20, 220, 30);
 lTituloApp.setForeground(Color.WHITE);
 ```
 

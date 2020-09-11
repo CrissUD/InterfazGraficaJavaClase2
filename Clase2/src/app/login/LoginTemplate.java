@@ -47,7 +47,7 @@ public class LoginTemplate extends JFrame {
     this.add(pDerecha);
 
     lTituloApp = new JLabel("Login de Usuario");
-    lTituloApp.setBounds(100, 20, 200, 30);
+    lTituloApp.setBounds(100, 20, 220, 30);
     lTituloApp.setForeground(Color.WHITE);
     pIzquierda.add(lTituloApp);
 
