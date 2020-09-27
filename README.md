@@ -330,7 +330,7 @@ La variable (objeto) que se coloca para los JPasswordField empezará con t minú
 * **Ejemplificación**
 ```javascript
 // Dentro del constructor
-tClaveUsuario = new JPasswordField("clave Usuario");
+tClaveUsuario = new JPasswordField("Clave Usuario");
 ```
 
 * **Configuración**
