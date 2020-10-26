@@ -243,14 +243,14 @@ lTituloLogin = new JLabel("Registra tus Datos");
 lTituloLogin.setSize(150, 30);
 lTituloLogin.setLocation((pDerecha.getWidth() - lTituloLogin.getWidth()) / 2, 60);
 lTituloLogin.setForeground(Color.DARK_GRAY);
-lEslogan.setHorizontalAlignment(SwingConstants.CENTER);
+lTituloLogin.setHorizontalAlignment(SwingConstants.CENTER);
 pDerecha.add(lTituloLogin);
 
 lNotificaciones = new JLabel("¿Recibir Notificaciones?");
 lNotificaciones.setSize(140, 20);
 lNotificaciones.setLocation((pDerecha.getWidth() - lNotificaciones.getWidth()) / 2, 370);
 lNotificaciones.setForeground(Color.DARK_GRAY);
-lEslogan.setHorizontalAlignment(SwingConstants.CENTER);
+lNotificaciones.setHorizontalAlignment(SwingConstants.CENTER);
 pDerecha.add(lNotificaciones);
 ```
 
